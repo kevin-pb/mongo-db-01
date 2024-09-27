@@ -1,0 +1,12 @@
+version: "2" 
+
+services:      
+   mongo_db:
+      image: mongo
+      container_name: MONGO_DB
+      ports:
+         - 3307:3307
+      environment:
+         MONGO_ROOT_PASSWORD: "admin"
+      volumes:
+         - ./volumen/mongo_db:/var/lib/mongo
