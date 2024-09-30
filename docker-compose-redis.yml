@@ -1,14 +1,10 @@
 version: "2"
 
 services:
-  mongo_db:
-    image: mongo
-    container_name: MONGO_DB
+  redis:
+    image: redis
+    container_name: redis
     ports:
-      - "27017:27017"  
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: root
-      MONGO_INITDB_DATABASE: demo
+      - "6379:6379"
     volumes:
-      - ./volumen/mongo_db:/data/db  
+      - ./volumen/redis_data:/data
