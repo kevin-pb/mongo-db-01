@@ -7,4 +7,4 @@ services:
     ports:
       - "6379:6379"
     volumes:
-      - ./volumen-redis/redis_data:/data
+      - ./volumen/redis_data:/data
