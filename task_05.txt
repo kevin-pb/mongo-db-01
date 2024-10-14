@@ -13,6 +13,8 @@ db.getCollection("prove").createIndex( {email:1} )
 
 db.getCollection("users").find({"age" : {$gt: 25}})
 
+db.getCollection("user").aggregate([{$group: {_id: null, averageAge: { $avg: "$age" }}}])
+
 $eq - equal - igual
 $lt - low than - menor que
 $lte - low than equal - menor o igual que
@@ -21,3 +23,7 @@ $gte - greater than equal - mayor o igual que
 $ne - not equal - distinto
 $in - in - dentro de
 $nin - not in - no dentro de
+
+https://www.tutorialesprogramacionya.com/mongodbya/detalleconcepto.php?punto=9&codigo=9&inicio=0
+https://www.mongodb.com/developer/products/mongodb/introduction-aggregation-framework/
+https://www.mongodb.com/developer/products/mongodb/introduction-aggregation-framework/
