@@ -8,3 +8,16 @@ db.users.updateOne({"email":"rios_pepe@gmail.com"},
 db.users.deleteOne({"email":"rios_pepe@gmail.com"})
 
 db.users.find()
+
+db.getCollection("prove").createIndex( {email:1} )
+
+db.getCollection("users").find({"age" : {$gt: 25}})
+
+$eq - equal - igual
+$lt - low than - menor que
+$lte - low than equal - menor o igual que
+$gt - greater than - mayor que
+$gte - greater than equal - mayor o igual que
+$ne - not equal - distinto
+$in - in - dentro de
+$nin - not in - no dentro de
