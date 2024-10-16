@@ -15,6 +15,23 @@ db.getCollection("users").find({"age" : {$gt: 25}})
 
 db.getCollection("user").aggregate([{$group: {_id: null, averageAge: { $avg: "$age" }}}])
 
+db.users.find().sort({ age: -1 })
+
+db.users.find({}, { name: 1, age: 1, _id: 0})
+
+Comentarios:
+
+db.users.find({}, { name: 1, age: 1, _id: 0}) En este código se ha de incluir solo lo que deses obtener,
+en este caso el campo name y el campo age lo que quiere decir que si tienes otro campo como email no debes 
+ponerlo, por otro lado, el id hay que ponerlo porque si no lo colocas igual se pondrá, pero si pones el
+id con un uno de valor como el resto seguirá saliendo por eso es necesario el ponerle el cero.
+
+db.users.find({}).sort({ age: -1 }) En este código el -1 simboliza que está en orden descendente,
+para orden ascendente necesitas poner un 1.
+
+db.users.find({}, { nombre: 1, edad: 1, _id: 0 }) En este código el {} simboliza que no se está haciendo 
+ningún filtro y dará toda la información.
+
 $eq - equal - igual
 $lt - low than - menor que
 $lte - low than equal - menor o igual que

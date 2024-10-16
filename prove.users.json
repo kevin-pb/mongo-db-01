@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "670d27b29650a792589bee17"
+  },
+  "name": "Fernado",
+  "age": "28",
+  "email": "fernan35@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "670d27b29650a792589bee18"
+  },
+  "name": "Pepe",
+  "age": "45",
+  "email": "rios.pepe@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "670d27b29650a792589bee19"
+  },
+  "name": "Juan",
+  "age": "25",
+  "email": "juan75@gmail.com"
+}]
