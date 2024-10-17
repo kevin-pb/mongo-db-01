@@ -2,6 +2,8 @@ db.users.insertMany([{"name":"Fernado", "age":"28", "email":"fernan35@gmail.com"
 {"name":"Pepe", "age":"45", "email":"rios.pepe@gmail.com"}, 
 {"name":"Juan", "age":"25", "email":"juan75@gmail.com"}])
 
+db.users.insertOne({"name":"Fernado", "age":"28", "email":"fernan35@gmail.com"})
+
 db.users.updateOne({"email":"rios_pepe@gmail.com"},
 {$set:{"age":"47"}})
 
