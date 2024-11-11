@@ -58,8 +58,9 @@ A contuinuacion hay un ejemlo de como actualizar un usuario:
 ## Eliminar un campo específico por un campo específico
 A contuinuacion hay un ejemlo de como eliminar un usuario: 
 
-db.users.deleteOne({"email":"rios_pepe@gmail.com"})
-
+```mongoDB
+  db.users.deleteOne({"email":"rios_pepe@gmail.com"})
+```
 ## Queries:
 
 ```mongoDB
