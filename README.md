@@ -55,6 +55,7 @@ A contuinuacion hay un ejemlo de como actualizar un usuario:
 db.users.updateOne({"email":"rios_pepe@gmail.com"},
 {$set:{"age":"47"}})
 ```
+
 ## Eliminar un campo específico por un campo específico
 A contuinuacion hay un ejemlo de como eliminar un usuario: 
 
