@@ -25,6 +25,12 @@ Una vez abramos el MongoDB Compass deberemos conectarnos a nuestra base de datos
 
 A continuación mostraré el proceso con imágenes:
 
+![CreatingADatabase1](./rsc/CreatingADatabase1.png)
+
+![CreatingADatabase2](./rsc/CreatingADatabase2.png)
+
+![CreatingADatabase3](./rsc/CreatingADatabase3.png)
+
 ## Insertar documentos
 
 Para insertar documentos se ha de usar el comando insertOne o insertMany dependiendo de lo que se nesesite a continuacion se ve un ejemplo de ambos casos:
@@ -90,8 +96,24 @@ This command allows you to create an index to optimize queries.
 
 ## Import and export of data
 
-Import:
+### Import: 
 
-To import data it is nesessari follow this steps: 
+To import data, it is necessary to follow these steps:
 
-![]()
+![ImportingACollection1](./rsc/ImportingACollection1.png)
+
+![ImportingACollection2](./rsc/ImportingACollection2.png)
+
+And finally select a file and press the button to accept.
+
+### Export: 
+
+To export data, it is necessary to follow these steps:
+
+![ExprotingACollection1](./rsc/ExprotingACollection1.png)
+
+![ExprotingACollection2](./rsc/ExprotingACollection2.png)
+
+![ExprotingACollection3](./rsc/ExprotingACollection3.png)
+
+And finally select the place to colocate the file and press the button to accept.
