@@ -1,29 +1,29 @@
-# Introduccion a los fundamentos basicos de mongodb
+# Introduction to the basics of mongodb
 
-## Para llebar a cabo este proyecto es nesesario:
+## To carry out this project it is necessary:
 
-* Descargar MongoDB Compass 
-* Descargar Docker 
-* Ejecutar el comando: git clone https://github.com/kevin-pb/mongo-db-01.git
-* Ejecutar el comando: docker pull mongo
-* Abrir el terminal en en el directorio del archivo y ejecutar el comando: docker-compose 
-  docker-compose-mongo.yml up -d
+* Download MongoDB Compass
+* Download Docker
+* Run the command: git clone https://github.com/kevin-pb/mongo-db-01.git
+* Run the command: docker pull mongo
+* Open the terminal in the directory of the file and run the command: docker-compose
+docker-compose-mongo.yml up -d
 
-## En este proyecto se verá:
+## In this project you will see:
 
-* Crear una base de datos y una colección
-* Insertar documentos
-* Actualizar un documento específico cambiando un campo específico
-* Eliminar un campo específico por un campo específico
+* Create a database and a collection
+* Insert documents
+* Update a specific document by changing a specific field
+* Delete a specific field by a specific field
 * Queries
-* Creacion de un indicie
-* Importacion y exportacion de datos
+* Create an index
+* Import and export data
 
-## Crear una base de datos y una colección
+## Create a database and a collection
 
-Una vez abramos el MongoDB Compass deberemos conectarnos a nuestra base de datos. Luego se crearan automáticamente unas bases de datos que no vamos a tocar, en la esquina superior derecha podrás ver un botón que dice crear base de datos, se nos abrirá un menu que nos dejara ponerle el nombre a la base de datos y a una coleccion en la cual trabajabaremos.
+Once we open MongoDB Compass we must connect to our database. Then some databases will be created automatically, which we will not touch. In the upper right corner you will see a button that says create database. A menu will open that will allow us to name the database and a collection in which we will work.
 
-A continuación mostraré el proceso con imágenes:
+I will show the process with images below:
 
 ![CreatingADatabase1](./rsc/CreatingADatabase1.png)
 
@@ -31,9 +31,9 @@ A continuación mostraré el proceso con imágenes:
 
 ![CreatingADatabase3](./rsc/CreatingADatabase3.png)
 
-## Insertar documentos
+## Inserting documents
 
-Para insertar documentos se ha de usar el comando insertOne o insertMany dependiendo de lo que se nesesite a continuacion se ve un ejemplo de ambos casos:
+To insert documents you must use the insertOne or insertMany command depending on what you need. Below is an example of both cases:
 
 ### insertMany:
 
@@ -48,16 +48,15 @@ Para insertar documentos se ha de usar el comando insertOne o insertMany dependi
 db.users.insertOne({"name":"Fernado", "age":"28", "email":"fernan35@gmail.com"})
 ```
 
-## Actualizar un documento específico cambiando un campo específico
-A contuinuacion hay un ejemlo de como actualizar un usuario:
+## Update a specific document by changing a specific field
+Here is an example of how to update a user:
 
 ```mongoDB
   db.users.updateOne({"email":"rios_pepe@gmail.com"}, {$set:{"age":"47"}})
 ```
 
-## Eliminar un campo específico por un campo específico
-A contuinuacion hay un ejemlo de como eliminar un usuario: 
-
+## Delete a specific field by a specific field
+Here is an example of how to delete a user:
 ```mongoDB
   db.users.deleteOne({"email":"rios_pepe@gmail.com"})
 ```
@@ -94,6 +93,14 @@ Create a query that returns only the “name” and “age” fields of the user
 db.getCollection("prove").createIndex( {email:1} )
 ```
 This command allows you to create an index to optimize queries.
+
+## Agregation Frameworck
+
+Aqui se utiliza el Agregation Framework para calcular el promedio de edad de todos los usuarios. El Agregation Framework a grandes rasgos es una forma de realizar consultas complejas en NoSQL.
+
+```mongoDB
+db.getCollection("user").aggregate([{$group: {_id: null, averageAge: { $avg: "$age" }}}])
+```
 
 ## Import and export of data
 
