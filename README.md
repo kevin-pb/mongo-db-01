@@ -96,7 +96,7 @@ This command allows you to create an index to optimize queries.
 
 ## Agregation Frameworck
 
-Aqui se utiliza el Agregation Framework para calcular el promedio de edad de todos los usuarios. El Agregation Framework a grandes rasgos es una forma de realizar consultas complejas en NoSQL.
+Here, the Aggregation Framework is used to calculate the average age of all users. The Aggregation Framework is, in a nutshell, a way of performing complex queries in NoSQL.
 
 ```mongoDB
 db.getCollection("user").aggregate([{$group: {_id: null, averageAge: { $avg: "$age" }}}])
