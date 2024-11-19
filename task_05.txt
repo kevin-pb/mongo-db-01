@@ -15,7 +15,7 @@ db.getCollection("prove").createIndex( {email:1} )
 
 db.getCollection("users").find({"age" : {$gt: 25}})
 
-db.getCollection("user").aggregate([{$group: {_id: null, averageAge: { $avg: "$age" }}}])
+db.getCollection("users").aggregate([{$group: {_id: null, averageAge: { $avg: "$age" }}}])
 
 db.users.find().sort({ age: -1 })
 
